@@ -1,7 +1,7 @@
 .metadata
 */HELP.md
 */target/
-*/target/
+*/.apt_generated_tests
 !*/.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
