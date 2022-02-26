@@ -1,8 +1,0 @@
-package com.ibm.academia.restapi.ipfraude.modelo.repositorios;
-
-import org.springframework.stereotype.Repository;
-
-@Repository
-public class BlackListRepository {
-
-}

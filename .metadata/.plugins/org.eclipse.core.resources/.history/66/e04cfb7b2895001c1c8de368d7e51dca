@@ -1,5 +1,0 @@
-package com.ibm.academia.restapi.ipfraude.modelo.mapper;
-
-public class CountryMapper {
-
-}

@@ -1,5 +1,0 @@
-package com.ibm.academia.restapi.ipfraude.modelo.entidades;
-
-public class BlackList {
-
-}

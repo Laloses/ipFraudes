@@ -1,9 +1,0 @@
-spring.application.name=api-fraudes
-server.port=8002
-
-server.servlet.context-path=/api/v1/api-fraudes
-eureka.client.service-url.defaultZone=http://localhost:8761/eureka
-
-#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 20000
-#ribbon.ConnectTimeout: 3000
-#ribbon.ReadTimeout: 10000
