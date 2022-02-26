@@ -1,0 +1,65 @@
+1645674608596	Rename package 'com.ibm.academia.restapi.articulos'
+1645674803361	Rename type 'ProductoClienteRest'
+1645674864530	Rename type 'CountryRrest'
+1645674989312	Rename type 'ArticuloController'
+1645675024195	Delete element
+1645675043370	Rename type 'Producto'
+1645675094989	Delete element
+1645675122586	Rename type 'IArticuloService'
+1645675157655	Rename package 'com.ibm.academia.restapi.ipfraude.modelo.entidades'
+1645675168730	Rename type 'Country'
+1645675338016	Rename type 'ArticuloServiceFeign'
+1645675392939	Rename type 'CountryRest'
+1645675456725	Rename type 'CountryRestFeign'
+1645675615616	Copy compilation unit
+1645676686033	Rename type 'CountryServiceFeign'
+1645677719595	Copy compilation unit
+1645677739319	Delete element
+1645679053109	Rename local variable 'productoId'
+1645681078500	Copy compilation unit
+1645681098551	Copy compilation unit
+1645681211224	Copy compilation unit
+1645681383066	Copy compilation unit
+1645682495930	Rename type 'CountryDAOImplFeign'
+1645682506428	Rename type 'CountryDAO'
+1645682668693	Rename local variable 'countryDTO'
+1645723576700	Delete element
+1645723578529	Delete element
+1645724465178	Rename field 'CountryDTOService'
+1645724494222	Rename field 'countryDTOService'
+1645725269129	Rename package 'com.ibm.academia.restapi.articulos'
+1645725274021	Delete element
+1645727590032	Delete element
+1645762375482	Rename type 'CountryServiceImplTest'
+1645762407964	Copy compilation unit
+1645762429814	Rename type 'Ip2CountryServiceIplTest'
+1645762436993	Rename type 'CountryLayerServiceIplTest'
+1645766496743	Copy compilation unit
+1645766652025	Copy compilation unit
+1645766813044	Delete elements
+1645766864260	Copy compilation unit
+1645823679131	Copy compilation unit
+1645823704714	Rename type 'CountryLayerServiceImplTest'
+1645823728478	Rename type 'Ip2CountryServiceImplTest'
+1645824108364	Copy file
+1645826393759	Rename type 'CountryService'
+1645826409492	Rename type 'CountryServiceImpl'
+1645826427918	Rename type 'CountryController'
+1645826639589	Rename field 'countryService'
+1645830768811	Copy compilation unit
+1645831097886	Rename type 'BadRequestIp2ContryException'
+1645835787816	Rename type 'CountryLayerRest'
+1645835909433	Rename field 'clientLayer'
+1645836134763	Rename type 'CountryLayerDTO'
+1645836230343	Rename type 'CountryCoinDRO'
+1645836249967	Rename type 'FixerDTO'
+1645836275126	Rename type 'Ip2CountryDTO'
+1645836314867	Rename local variable 'countryLayerDTO'
+1645836598203	Rename type 'CountryLayerClientTest'
+1645841630625	Rename package 'com.ibm.academia.restapi.ipfraude.services'
+1645841651452	Copy compilation unit
+1645841674274	Rename type 'CountryRestTest'
+1645841691000	Rename field 'countryRest'
+1645842170492	Rename local variable 'code'
+1645848741083	Copy compilation unit
+1645849960738	Copy compilation unit

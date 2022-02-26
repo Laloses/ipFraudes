@@ -1,0 +1,9 @@
+package com.ibm.academia.restapi.ipfraude.modelo.mapper;
+
+import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryDTO;
+
+public class CountryMapper {
+	static CountryDTO mapCountry(Object objectcountry) {
+		
+	}
+}

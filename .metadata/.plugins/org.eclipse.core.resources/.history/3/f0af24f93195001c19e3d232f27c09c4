@@ -1,0 +1,43 @@
+package com.ibm.academia.restapi.ipfraude.modelo.entidades;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryDTO;
+
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter
+@Getter
+@Entity
+@NoArgsConstructor
+@EqualsAndHashCode
+public class BlackList {
+	
+	@Id
+	private Long id;
+	
+	@Column(name = "ip", nullable = false)
+	private String ip;
+	
+	@Embedded
+	private CountryDTO country;
+	
+	@Column(name = "fecha_creacion")
+	private Date fechaCreacion;
+
+	public BlackList(Long id, String ip, CountryDTO country) {
+		super();
+		this.id = id;
+		this.ip = ip;
+		this.country = country;
+	}
+	
+}

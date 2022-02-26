@@ -1,0 +1,7 @@
+package com.ibm.academia.restapi.ipfraude.modelo.servicios;
+
+import java.util.List;
+
+public interface CountryDAO {
+	public Articulo buscarArticuloPorId(Long productoId, Integer cantidad);
+}
