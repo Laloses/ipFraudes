@@ -1,0 +1,5 @@
+package com.ibm.academia.restapi.ipfraude.datos;
+
+public class DatosDummy {
+
+}

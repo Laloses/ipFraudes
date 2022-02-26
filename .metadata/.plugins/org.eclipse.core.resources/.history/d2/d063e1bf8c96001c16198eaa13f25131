@@ -1,0 +1,15 @@
+package com.ibm.academia.restapi.ipfraude.modelo.servicios;
+
+import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryDTO;
+import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryLayerDTO;
+import com.ibm.academia.restapi.ipfraude.modelo.dto.FixerDTO;
+import com.ibm.academia.restapi.ipfraude.modelo.dto.Ip2CountryDTO;
+import com.ibm.academia.restapi.ipfraude.modelo.entidades.BlackList;
+
+public interface IPService {
+	public BlackList banIP(String ip);
+	public CountryLayerDTO findCountryByCode3(String code3);
+	public Ip2CountryDTO findCountryByIP(String ip);
+	public FixerDTO findRateByCodeCurrency(String code);
+	public CountryDTO getCountryInfoByIP(String ip);
+}

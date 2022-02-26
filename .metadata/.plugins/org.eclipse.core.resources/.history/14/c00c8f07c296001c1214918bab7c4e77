@@ -1,0 +1,24 @@
+spring.application.name=api-fraudes
+server.port=${PORT:0}
+
+eureka.instance.instance-id=${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+server.servlet.context-path=/api/v1/api-fraudes
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=sa
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+ip2country.url = https://api.ip2country.info
+restcountry.url = https://restcountries.com/v2
+fixer.url = http://api.countrylayer.com/v2
+fixer.api-key = c8a1ea606c771b194bf6d25a3568642d
+
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 20000
+#ribbon.ConnectTimeout: 3000
+#ribbon.ReadTimeout: 10000
