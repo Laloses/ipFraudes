@@ -1,0 +1,61 @@
+package com.ibm.academia.restapi.ipfraude.services;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryLayerDTO;
+import com.ibm.academia.restapi.ipfraude.modelo.dto.Ip2CountryDTO;
+import com.ibm.academia.restapi.ipfraude.modelo.servicios.CountryServiceImpl;
+
+@SpringBootTest
+public class Ip2CountryServiceImplTest {
+	
+	@Autowired
+	private CountryServiceImpl countryService;
+	
+	@Test
+	@DisplayName("Buscando con un codigo alpha correcto")
+	void findCountryByIP() {
+		//GWT
+		//Given
+		String code = "AFG";
+		//When
+		Ip2CountryDTO expected = countryService.findCountryByCode3(code);
+		//Then
+		assertThat(expected.getISO()).isEqualTo("DEU");
+		assertThat(expected.getNombre()).isEqualTo("Germany");
+	}
+	
+	@Test
+	@DisplayName("Ip mal enviado o no existente")
+	void findCountryByIPBadIP() {
+		//GWT
+		//Given
+		String ip = "5.6.7.812321312";
+		//When
+		Ip2CountryDTO expected = countryService.findCountryByIP(ip);
+		//Then
+		assertThat(expected.getISO()).isEqualTo(null);
+		assertThat(expected.getNombre()).isEqualTo(null);
+	}
+	
+	@Test
+	@DisplayName("Buscando usando el codigo ISO")
+	@Disabled
+	void findCountryByCode3() {
+		//GWT
+		//Given
+		String ISO = "DEU";
+		//When
+		CountryLayerDTO expected = countryService.findCountryByCode3(ISO);
+		//Then
+		
+		assertThat(expected.getMoneda() == "EUR").isTrue();
+		assertThat(expected.getCotizacion() == "EUR").isTrue();
+	}
+}

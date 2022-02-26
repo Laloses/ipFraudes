@@ -1,0 +1,19 @@
+package com.ibm.academia.restapi.ipfraude.modelo.dto;
+
+import java.io.Serializable;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
+public class CountryDTO implements Serializable {
+	private static final long serialVersionUID = -8869578670292445720L;
+	private String nombre;
+	private String ISO;
+	private String moneda;
+	private String cotizacion;
+	/**
+	 * 
+	 */
+}

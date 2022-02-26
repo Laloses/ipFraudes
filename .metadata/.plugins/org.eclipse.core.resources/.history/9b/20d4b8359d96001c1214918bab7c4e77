@@ -1,0 +1,17 @@
+package com.ibm.academia.restapi.ipfraude.modelo.mapper;
+
+import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryDTO;
+import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryCoinDTO;
+import com.ibm.academia.restapi.ipfraude.modelo.dto.FixerDTO;
+import com.ibm.academia.restapi.ipfraude.modelo.dto.Ip2CountryDTO;
+
+public class CountryMapper {
+	
+	public static CountryDTO mapFromIPAndInfo(Ip2CountryDTO ipDTO, CountryCoinDTO layerDTO, FixerDTO fixerDTO) {
+		CountryDTO countryDTO = new CountryDTO();
+		countryDTO.setISO(ipDTO.getISO());
+		countryDTO.setMoneda(layerDTO.getMoneda());
+		countryDTO.setCotizacion(fixerDTO.getCotizacion());
+		return countryDTO;
+	}
+}

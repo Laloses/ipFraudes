@@ -1,0 +1,11 @@
+package com.ibm.academia.restapi.ipfraude.modelo.servicios;
+
+import java.util.List;
+
+import com.ibm.academia.restapi.ipfraude.modelo.entidades.Articulo;
+
+public interface IArticuloService 
+{
+	public List<Articulo> buscarTodosArticulos();
+	public Articulo buscarArticuloPorId(Long productoId, Integer cantidad);
+}

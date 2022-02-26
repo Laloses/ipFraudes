@@ -1,0 +1,12 @@
+package com.ibm.academia.restapi.ipfraude.excepciones;
+
+public class BadRequestIp2ContryException extends RuntimeException{
+
+	public BadRequestIp2ContryException(String mensaje){
+		super(mensaje);
+	}
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5839647968836668786L;
+}

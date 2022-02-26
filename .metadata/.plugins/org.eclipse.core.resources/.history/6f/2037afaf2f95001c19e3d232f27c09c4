@@ -1,0 +1,9 @@
+package com.ibm.academia.restapi.ipfraude.modelo.entidades;
+
+import java.util.Date;
+
+public class BlackList {
+	private String ip;
+	private CountryDTO country;
+	private Date fechaCreacion;
+}

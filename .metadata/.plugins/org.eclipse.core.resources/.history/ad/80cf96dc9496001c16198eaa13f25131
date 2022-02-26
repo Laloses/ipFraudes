@@ -1,0 +1,61 @@
+package com.ibm.academia.restapi.ipfraude.services;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.anyString;
+
+import java.util.Map;
+
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.ibm.academia.restapi.ipfraude.clientes.FixerRest;
+import com.ibm.academia.restapi.ipfraude.modelo.dto.FixerDTO;
+import com.ibm.academia.restapi.ipfraude.modelo.mapper.FixerMapper;
+import com.ibm.academia.restapi.ipfraude.modelo.servicios.IPServiceImpl;
+
+/**
+ * Para estos tests, solo se puede hacer uno a la vez, por la suscripcion basica de la API CountryLayer, sino arroja un 429
+ * @author EMHH 24-02-2022
+ */
+@SpringBootTest
+public class FixerClientTest {
+	
+	@Autowired
+	private FixerRest fixerRest;
+	
+	@Value("${fixer.api-key}")
+	private String apiKey;
+	
+	@Test
+	@DisplayName("Buscando cotizacion con un codigo alpha3 correcto")
+	void findCountryByIP() {
+		//GWT
+		//Given
+		String code = "DEU";
+		//When
+		Map<String,Object> fixerResponse = fixerRest.getAllBaseDefault(apiKey);
+		Map<String, String> rates = (Map<String, String>) fixerResponse.get("rates");
+		
+		FixerDTO fixerDTO = FixerMapper.mapWithCoin(rates, code);
+		FixerDTO expected = fixerRest.getAllBaseDefault(apiKey);
+		//Then
+		assertThat(expected.getCotizacion()).isEqualTo(anyString());
+	}
+	
+	@Test
+	@DisplayName("Buscando cotizacion con un codigo alpha3 incorrecto o no existente")
+	@Disabled
+	void findCountryByIPBadIP() {
+		//GWT
+		//Given
+		String code = "DEUasas";
+		//When
+		FixerDTO expected = fixerRest.findRateByCodeCurrency(code);
+		//Then
+		assertThat(expected.getCotizacion()).isEqualTo(null);
+	}
+}
