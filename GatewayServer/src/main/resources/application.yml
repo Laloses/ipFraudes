@@ -2,7 +2,7 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: api-productos
-        uri: lb://api-fraudes
-        predicates:          - Path=/api/gateway1/**
-        filters:          - StripPrefix=2
+      - id: api-ip
+        uri: lb://api-ip
+        predicates:          - Path=/fraudes/**
+        filters:          - StripPrefix=1

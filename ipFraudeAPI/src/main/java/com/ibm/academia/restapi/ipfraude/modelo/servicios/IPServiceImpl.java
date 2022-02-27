@@ -81,6 +81,8 @@ public class IPServiceImpl implements IPService {
 			throw new BadRequestExternalApiException("Error al obtener la moneda del pais");
 		
 		Map<String, Object> responseFixer = clientFixerRest.getAllBaseDefault(apiKeyFixer);
+		
+		@SuppressWarnings("unchecked")
 		Map<String, Double> rates = (Map<String, Double>) responseFixer.get("rates");
 		
 		if(!rates.containsKey(coinDTO.getMoneda()))

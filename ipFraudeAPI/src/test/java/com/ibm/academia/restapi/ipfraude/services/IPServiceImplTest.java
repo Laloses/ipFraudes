@@ -2,22 +2,13 @@ package com.ibm.academia.restapi.ipfraude.services;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.ibm.academia.restapi.ipfraude.clientes.CountryRest;
-import com.ibm.academia.restapi.ipfraude.excepciones.BadRequestExternalApiException;
-import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryCoinDTO;
 import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryDTO;
-import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryNameDTO;
 import com.ibm.academia.restapi.ipfraude.modelo.servicios.IPService;
-import com.ibm.academia.restapi.ipfraude.modelo.servicios.IPServiceImpl;
-
-import feign.FeignException;
 
 /**
  * @author EMHH 24-02-2022

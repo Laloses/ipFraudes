@@ -12,10 +12,7 @@ resilience4j:
       country-info:
         base-config: defecto
   timelimiter:
-    configs:
-      defecto:
-        timeout-duration: 2s
     instances:
       country-info:
-        timeout-duration: 4s
+        timeout-duration: 5s
         cancel-running-future: true

@@ -9,16 +9,13 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.context.SpringBootTest;
 
-import com.ibm.academia.restapi.ipfraude.clientes.FixerRest;
 import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryRateDTO;
 import com.ibm.academia.restapi.ipfraude.modelo.mapper.FixerMapper;
 
 /**
  * @author EMHH 24-02-2022
  */
-@SpringBootTest
 public class FixerClientTest {
 	
 	@Autowired
@@ -35,6 +32,7 @@ public class FixerClientTest {
 		String code = "EUR";
 		//When
 		Map<String,Object> fixerResponse = fixerRest.getAllBaseDefault(apiKey);
+		@SuppressWarnings("unchecked")
 		Map<String, Double> rates = (Map<String, Double>) fixerResponse.get("rates");
 		
 		CountryRateDTO expected = FixerMapper.mapWithCoin(rates, code);
@@ -50,6 +48,7 @@ public class FixerClientTest {
 		String code = "USD";
 		//When
 		Map<String,Object> fixerResponse = fixerRest.getAllBaseDefault(apiKey);
+		@SuppressWarnings("unchecked")
 		Map<String, Double> rates = (Map<String, Double>) fixerResponse.get("rates");
 		
 		CountryRateDTO expected = FixerMapper.mapWithCoin(rates, code);
@@ -66,6 +65,7 @@ public class FixerClientTest {
 		String code = "EURasa";
 		//When
 		Map<String,Object> fixerResponse = fixerRest.getAllBaseDefault(apiKey);
+		@SuppressWarnings("unchecked")
 		Map<String, Double> rates = (Map<String, Double>) fixerResponse.get("rates");
 		
 		CountryRateDTO expected = FixerMapper.mapWithCoin(rates, code);

@@ -2,17 +2,16 @@ package com.ibm.academia.restapi.ipfraude.controladores;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ibm.academia.restapi.ipfraude.excepciones.BadRequestExternalApiException;
@@ -21,6 +20,8 @@ import com.ibm.academia.restapi.ipfraude.modelo.entidades.BlackList;
 import com.ibm.academia.restapi.ipfraude.modelo.servicios.IPService;
 
 import feign.FeignException;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 
 @RestController
 public class IPController {
@@ -28,9 +29,6 @@ public class IPController {
 	
 	@Autowired
 	private IPService ipService;
-	
-	@Autowired
-	private CircuitBreakerFactory circuitBreaker;
 	
 	/**
 	 * Metodo para hacer ban a una IP
@@ -66,23 +64,20 @@ public class IPController {
 	 * @return Los datos del pais mediante un DTO
 	 * @author EMHH 24-02-22
 	 */
+	@CircuitBreaker(name = "country-info", fallbackMethod = "metodoAlternativo")
+	@TimeLimiter(name = "country-info")
 	@GetMapping("/country-info/{ip}")
-	public ResponseEntity<?> getCountryByIP(@PathVariable String ip) {
-		return circuitBreaker.create("country-info")
-				.run(
-						()-> new ResponseEntity<CountryDTO>(ipService.getCountryInfoByIP(ip), HttpStatus.OK),
-						e -> metodoAlternativo(e)
-				);
+	public CompletableFuture<ResponseEntity<?>> getCountryByIP(@PathVariable String ip) {
+		return CompletableFuture.supplyAsync( () -> new ResponseEntity<CountryDTO>(ipService.getCountryInfoByIP(ip), HttpStatus.OK));
 	}
 	
 	/**
-	 * Método alternatio para tolerancia a fallos
-	 * @param productoId Párametro del producto 
-	 * @param cantidad Párametro cantidad de los productos
-	 * @return Retorna un objeto de tipo CountryDTO
+	 * Método alternativo para controlar los fallos de getCountryByIP
+	 * @param e El error que se produce
+	 * @return Retorna una respuesta en base al tipo de error
 	 * @author EMHH - 23-02-2022
 	 */
-	public ResponseEntity<?> metodoAlternativo(Throwable e) {
+	public CompletableFuture<ResponseEntity<?>> metodoAlternativo(Throwable e) {
 		logger.warn(e.getMessage());
 		
 		Map<String, Object> respuesta = new HashMap<>();
@@ -98,6 +93,6 @@ public class IPController {
 //		return new ResponseEntity<Map<String, String>>(respuesta, HttpStatus.INTERNAL_SERVER_ERROR);
 
 		respuesta.put("data", new CountryDTO());
-		return new ResponseEntity<Map<String, Object>>(respuesta, HttpStatus.OK);
+		return CompletableFuture.supplyAsync( () -> new ResponseEntity<Map<String, Object>>(respuesta, HttpStatus.OK));
 	}
 }

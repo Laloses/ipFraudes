@@ -1,9 +1,6 @@
 package com.ibm.academia.restapi.ipfraude.modelo.dto;
 
 import java.io.Serializable;
-import java.util.Map;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Getter;
 import lombok.Setter;

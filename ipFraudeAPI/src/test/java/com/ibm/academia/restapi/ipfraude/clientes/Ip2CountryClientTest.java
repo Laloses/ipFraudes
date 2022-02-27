@@ -2,21 +2,12 @@ package com.ibm.academia.restapi.ipfraude.clientes;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
-import com.ibm.academia.restapi.ipfraude.clientes.Ip2CountryRest;
-import com.ibm.academia.restapi.ipfraude.excepciones.BadRequestExternalApiException;
-import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryCoinDTO;
 import com.ibm.academia.restapi.ipfraude.modelo.dto.CountryNameDTO;
-import com.ibm.academia.restapi.ipfraude.modelo.servicios.IPServiceImpl;
 
-import feign.FeignException;
-
-@SpringBootTest
 public class Ip2CountryClientTest {
 	
 	@Autowired
