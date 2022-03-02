@@ -6,21 +6,22 @@ import com.ibm.academia.restapi.ipfraude.modelo.entidades.BlackList;
 public class DatosDummy {
 	public static CountryDTO country01() {
 		CountryDTO countryDTO = new CountryDTO();
-		countryDTO.setCotizacion(0.05);
+		countryDTO.setRate(0.05);
 		countryDTO.setISO("MXN");
-		countryDTO.setMoneda("MXN");
-		countryDTO.setNombre("Mexico");
+		countryDTO.setCoin("MXN");
+		countryDTO.setName("Mexico");
 		return countryDTO;
 	}
 	public static CountryDTO countryGermany() {
 		CountryDTO countryDTO = new CountryDTO();
-		countryDTO.setCotizacion(Double.valueOf(1));
+		countryDTO.setRate(Double.valueOf(1));
 		countryDTO.setISO("DEU");
-		countryDTO.setMoneda("EUR");
-		countryDTO.setNombre("Germany");
+		countryDTO.setCoin("EUR");
+		countryDTO.setName("Germany");
 		return countryDTO;
 	}
 	
-	public static BlackList blackList01() { return new BlackList(null,"1.2.3.4",country01());}
+	public static BlackList blackList01() { return new BlackList(null,"1.2.3.4", true, country01());}
+	public static BlackList blackList02() { return new BlackList(null,"1.2.3.4", false, countryGermany());}
 	
 }

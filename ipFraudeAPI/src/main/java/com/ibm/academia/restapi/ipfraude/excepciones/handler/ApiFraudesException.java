@@ -16,28 +16,28 @@ import com.ibm.academia.restapi.ipfraude.excepciones.NotFoundException;
 @ControllerAdvice
 public class ApiFraudesException {
     @ExceptionHandler(value = NotFoundException.class)
-    public ResponseEntity<Object> noExisteException(NotFoundException exception) {
+    public ResponseEntity<Object> notExistException(NotFoundException exception) {
         Map<String, Object> respuesta = new HashMap<String, Object>();
         respuesta.put("error", exception.getMessage());
         return new ResponseEntity<>(respuesta, HttpStatus.NOT_FOUND);
     }
     
     @ExceptionHandler(value = BadRequestExternalApiException.class)
-    public ResponseEntity<Object> respuestaErroneaException(BadRequestExternalApiException exception) {
+    public ResponseEntity<Object> wrongAnswerException(BadRequestExternalApiException exception) {
     	Map<String, Object> respuesta = new HashMap<String, Object>();
     	respuesta.put("error", exception.getMessage());
     	return new ResponseEntity<>(respuesta, HttpStatus.BAD_REQUEST);
     }
     
     @ExceptionHandler(value = NotAllowedException.class)
-    public ResponseEntity<Object> noTienePermisoException(NotAllowedException exception) {
+    public ResponseEntity<Object> dontHavePermissionException(NotAllowedException exception) {
     	Map<String, Object> respuesta = new HashMap<String, Object>();
     	respuesta.put("error", exception.getMessage());
     	return new ResponseEntity<>(respuesta, HttpStatus.METHOD_NOT_ALLOWED);
     }
 
     @ExceptionHandler(value = AlreadyExistException.class)
-    public ResponseEntity<Object> yaExisteException(AlreadyExistException exception) {
+    public ResponseEntity<Object> alreadyExistsException(AlreadyExistException exception) {
         Map<String, Object> respuesta = new HashMap<String, Object>();
         respuesta.put("error", exception.getMessage());
         return new ResponseEntity<>(respuesta, HttpStatus.BAD_REQUEST);

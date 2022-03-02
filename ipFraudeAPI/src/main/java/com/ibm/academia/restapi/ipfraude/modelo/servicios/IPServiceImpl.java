@@ -41,54 +41,74 @@ public class IPServiceImpl implements IPService {
 	@Value("${fixer.api-key}")
 	private String apiKeyFixer;
 
-
 	/**
-	 * Guarda un nuevo valor de IP dentro de la lista negra
-	 * @param ip Valor de IP a guardar
-	 * @return BlackList
+	 * Saves a new value in the BlackList repository
+	 * @param ip Value for the IP to save
+	 * @return An object BlackList
+	 * @throws AlreadyExistException When the value to save already exist
 	 * @author EMHH 25-02-2022
 	 */
 	@Override
 	public BlackList banIP(String ip) {
-		Optional<BlackList> blOptional = blackListRepository.findByIp(ip);
+		Optional<BlackList> blOptional = blackListRepository.findByIpAndBanned(ip,true);
 		if(blOptional.isPresent())
-			throw new AlreadyExistException("Ya existe esa IP en la lista negra.");
+			throw new AlreadyExistException("Already exist that IP in the black list.");
 		
 		CountryDTO countryDTO = getCountryInfoByIP(ip);
-		BlackList blackList = new BlackList(null,ip,countryDTO);
+		BlackList blackList = new BlackList(null,ip,true,countryDTO);
 		
-		BlackList blackListSaved = blackListRepository.save(blackList);
-		return blackListSaved;
+		return blackListRepository.save(blackList);
 	}
 
 	/**
-	 * Busca infomacion variada de un país, en base a su ip utilizando consultas a clientes Feign
-	 * @param ip IP pertenenciente a un país
+	 * Remove the ban for a determinate IP
+	 * @param ip Value for the IP to unban
+	 * @return An object BlackList
+	 * @throws NotFoundException When the value not exists
+	 * @author EMHH 25-02-2022
+	 */
+	@Override
+	public BlackList unbanIP(String ip) {
+		Optional<BlackList> blOptional = blackListRepository.findByIpAndBanned(ip,true);
+		if(!blOptional.isPresent())
+			throw new NotFoundException("There is no banned record with that IP.");
+		
+		blOptional.get().setBanned(false);
+		
+		return blackListRepository.save(blOptional.get());	
+	}
+
+	/**
+	 * Search information of a country, with a given IP using endpoints of Feign clients
+	 * @param ip IP that belongs to a country
 	 * @return CountryDTO
+	 * @throws NotAllowedException When the IP is banned
+	 * @throws BadRequestExternalApiException When some endpint fails
+	 * @throws NotFoundException When there is no information in the response
 	 * @author EMHH 25-02-2022
 	 */
 	@Override
 	public CountryDTO getCountryInfoByIP(String ip) {
-		Optional<BlackList> blOptional = blackListRepository.findByIp(ip);
+		Optional<BlackList> blOptional = blackListRepository.findByIpAndBanned(ip, true);
 		
 		if(blOptional.isPresent())
-			throw new NotAllowedException("La IP consultada no tiene permiso");
+			throw new NotAllowedException("This IP does not have permission.");
 		
 		CountryNameDTO cNameDTO = clientIP.findCountryByIP(ip);
 		CountryCoinDTO coinDTO = countryRest.findCountryByCode3(cNameDTO.getISO());
 		
-		if(coinDTO.getMoneda() == null)
-			throw new BadRequestExternalApiException("Error al obtener la moneda del pais");
+		if(coinDTO.getCoin() == null)
+			throw new BadRequestExternalApiException("Error when getting the coin of the country.");
 		
 		Map<String, Object> responseFixer = clientFixerRest.getAllBaseDefault(apiKeyFixer);
 		
 		@SuppressWarnings("unchecked")
 		Map<String, Double> rates = (Map<String, Double>) responseFixer.get("rates");
 		
-		if(!rates.containsKey(coinDTO.getMoneda()))
-			throw new NotFoundException("No existe el codigo de moneda para ese país");
+		if(!rates.containsKey(coinDTO.getCoin()))
+			throw new NotFoundException("The coin code of that country does not have a rate.");
 		
-		CountryRateDTO cRateDTO = FixerMapper.mapWithCoin(rates, coinDTO.getMoneda());
+		CountryRateDTO cRateDTO = FixerMapper.mapWithCoin(rates, coinDTO.getCoin());
 		
 		return CountryMapper.mapFromIPAndInfo(cNameDTO, coinDTO, cRateDTO);
 	}

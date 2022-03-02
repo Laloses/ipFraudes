@@ -8,9 +8,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class CountryRateDTO implements Serializable {
-	private Double cotizacion;
-	/**
-	 * 
-	 */
+	private Double rate;
+	
 	private static final long serialVersionUID = -357287074753864138L;
 }

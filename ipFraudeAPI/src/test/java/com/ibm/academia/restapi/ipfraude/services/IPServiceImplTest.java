@@ -29,9 +29,9 @@ public class IPServiceImplTest {
 		CountryDTO expected = ipService.getCountryInfoByIP(ip);
 		//Then
 		assertThat(expected.getISO()).isEqualTo("DEU");
-		assertThat(expected.getMoneda()).isEqualTo("EUR");
-		assertThat(expected.getNombre()).isEqualTo("Germany");
-		assertThat(expected.getCotizacion()).isEqualTo(1.0);
+		assertThat(expected.getCoin()).isEqualTo("EUR");
+		assertThat(expected.getName()).isEqualTo("Germany");
+		assertThat(expected.getRate()).isEqualTo(1.0);
 	}
 	
 	@Test
@@ -52,8 +52,8 @@ public class IPServiceImplTest {
 		}
 		//Then
 		assertThat(expected.getISO()).isEqualTo(null);
-		assertThat(expected.getMoneda()).isEqualTo(null);
-		assertThat(expected.getNombre()).isEqualTo(null);
-		assertThat(expected.getCotizacion()).isEqualTo(null);
+		assertThat(expected.getCoin()).isEqualTo(null);
+		assertThat(expected.getName()).isEqualTo(null);
+		assertThat(expected.getRate()).isEqualTo(null);
 	}
 }

@@ -11,5 +11,6 @@ import com.ibm.academia.restapi.ipfraude.modelo.entidades.BlackList;
 public interface BlackListRepository extends CrudRepository<BlackList, Long> {
 	
 	public Optional<BlackList> findByIp(String ip);
+	public Optional<BlackList> findByIpAndBanned(String ip, Boolean banned);
 
 }

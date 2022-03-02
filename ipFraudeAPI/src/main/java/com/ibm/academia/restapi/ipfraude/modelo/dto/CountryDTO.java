@@ -13,16 +13,13 @@ import lombok.Setter;
 @Getter
 @Embeddable
 public class CountryDTO implements Serializable {
-	private String nombre;
+	private String name;
 	private String ISO;
-	private String moneda;
-	@JsonProperty("cotizacion_actual")
-	private Double cotizacion;
-	@JsonProperty("cotizacion_moneda")
-	private String cotizacionMoneda = "EUR"; //Inicializada asi por el API que se usa
-	/**
-	 * 
-	 */
+	private String coin;
+	@JsonProperty("actual_rate")
+	private Double rate;
+	@JsonProperty("rate_coin")
+	private String rateCoin = "EUR"; //Initialize because the free API has that value
+
 	private static final long serialVersionUID = -8869578670292445720L;
-	
 }

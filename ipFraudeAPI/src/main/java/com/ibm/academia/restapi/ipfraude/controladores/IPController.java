@@ -31,9 +31,10 @@ public class IPController {
 	private IPService ipService;
 	
 	/**
-	 * Metodo para hacer ban a una IP
-	 * @param ip
-	 * @return Retorna la informacion guardada del ip y los datos del pais
+	 * Method for baning an IP
+	 * @param ip Value of the  IP to ban
+	 * @return Returns the information of the country that belong to the IP and the id saved
+	 * @throws BadRequestExternalApiException When an end-point fails
 	 * @author EMHH 23-02-22
 	 */
 	@PutMapping("/ban-ip/{ip}")
@@ -43,28 +44,41 @@ public class IPController {
 			blackListSaved = ipService.banIP(ip);
 		} catch (FeignException.BadRequest e) {
 			logger.warn(e.getMessage());
-			throw new BadRequestExternalApiException(String.format("No hay datos para guardar sobre la IP %s",ip));
-		} catch (BadRequestExternalApiException e) {
-			logger.warn(e.getMessage());
-			throw new BadRequestExternalApiException(e.getMessage());
-		} catch (Exception e) {
-			logger.warn(e.getMessage());
-			
-			Map<String, String> respuesta = new HashMap<String, String>();
-			respuesta.put("error", e.getMessage());
-			return new ResponseEntity<Map<String, String>>(respuesta, HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+			throw new BadRequestExternalApiException(String.format("There's no data about the IP, try later. %s",ip));
+		} 
+//		catch (Exception e) {
+//			logger.warn(e.getMessage());
+//			
+//			Map<String, String> respuesta = new HashMap<String, String>();
+//			respuesta.put("error", e.getMessage());
+//			return new ResponseEntity<Map<String, String>>(respuesta, HttpStatus.INTERNAL_SERVER_ERROR);
+//		}
 		
 		return new ResponseEntity<BlackList>(blackListSaved, HttpStatus.OK);
 	}
 	
 	/**
-	 * Metodo para obtener la informacion de un país por la ip proporcionada
-	 * @param ip
-	 * @return Los datos del pais mediante un DTO
+	 * Method for baning an IP
+	 * @param ip Value of the  IP to ban
+	 * @return Returns the information of the country that belong to the IP and the id saved
+	 * @throws NotFoundException If there is no IP saved with that value or is already unbaned
+	 * @author EMHH 23-02-22
+	 */
+	@PutMapping("/unban-ip/{ip}")
+	public ResponseEntity<?> unbanIP(@PathVariable String ip)	{
+		BlackList blackList = ipService.unbanIP(ip);
+		
+		return new ResponseEntity<BlackList>(blackList, HttpStatus.OK);
+	}
+	
+	/**
+	 * Method to obtain the information of a country from the given IP
+	 * @param ip Value of the IP to search
+	 * @return Returns the country information in DTO format
+	 * @throws BadRequestExternalApiException When an endpint fails
 	 * @author EMHH 24-02-22
 	 */
-	@CircuitBreaker(name = "country-info", fallbackMethod = "metodoAlternativo")
+	@CircuitBreaker(name = "country-info", fallbackMethod = "methodAlternative")
 	@TimeLimiter(name = "country-info")
 	@GetMapping("/country-info/{ip}")
 	public CompletableFuture<ResponseEntity<?>> getCountryByIP(@PathVariable String ip) {
@@ -72,12 +86,12 @@ public class IPController {
 	}
 	
 	/**
-	 * Método alternativo para controlar los fallos de getCountryByIP
-	 * @param e El error que se produce
-	 * @return Retorna una respuesta en base al tipo de error
+	 * Alternative method for controlling the exceptions of getCountryByIP
+	 * @param e The exception
+	 * @return Returns a response in base of the kind of error
 	 * @author EMHH - 23-02-2022
 	 */
-	public CompletableFuture<ResponseEntity<?>> metodoAlternativo(Throwable e) {
+	public CompletableFuture<ResponseEntity<?>> methodAlternative(Throwable e) {
 		logger.warn(e.getMessage());
 		
 		Map<String, Object> respuesta = new HashMap<>();
@@ -87,7 +101,7 @@ public class IPController {
 			throw new BadRequestExternalApiException(e.getMessage());
 		
 		if(e instanceof FeignException.BadRequest)
-			throw new BadRequestExternalApiException("Información no encontrada, considera usar otra IP.");
+			throw new BadRequestExternalApiException("Information not found, consider using another IP. If the problem persists try later.");
 		
 //		if(e.getClass() == Exception.class)
 //		return new ResponseEntity<Map<String, String>>(respuesta, HttpStatus.INTERNAL_SERVER_ERROR);

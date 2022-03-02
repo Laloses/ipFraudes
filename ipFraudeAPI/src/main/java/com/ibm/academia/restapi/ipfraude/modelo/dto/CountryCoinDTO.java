@@ -14,15 +14,12 @@ import lombok.Setter;
 public class CountryCoinDTO implements Serializable {
 //	@JsonProperty("status")
 //	private String error;
-	private String moneda;
+	private String coin;
 	
 	@JsonProperty("currencies")
 	private void unpackCurrencies(List<Map<String, Object>> currencies) {
-		moneda = (String)currencies.get(0).get("code");
+		coin = (String)currencies.get(0).get("code");
 	}
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 2366095346076959598L;
 	
+	private static final long serialVersionUID = 2366095346076959598L;
 }

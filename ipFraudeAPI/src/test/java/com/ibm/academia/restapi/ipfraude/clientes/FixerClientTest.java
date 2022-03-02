@@ -37,7 +37,7 @@ public class FixerClientTest {
 		
 		CountryRateDTO expected = FixerMapper.mapWithCoin(rates, code);
 		//Then
-		assertThat(expected.getCotizacion() instanceof Double).isTrue();
+		assertThat(expected.getRate() instanceof Double).isTrue();
 	}
 	
 	@Test
@@ -53,7 +53,7 @@ public class FixerClientTest {
 		
 		CountryRateDTO expected = FixerMapper.mapWithCoin(rates, code);
 		//Then
-		assertThat(expected.getCotizacion() instanceof Double).isTrue();
+		assertThat(expected.getRate() instanceof Double).isTrue();
 	}
 	
 	@Test
@@ -70,6 +70,6 @@ public class FixerClientTest {
 		
 		CountryRateDTO expected = FixerMapper.mapWithCoin(rates, code);
 		//Then
-		assertThat(expected.getCotizacion()).isEqualTo(null);
+		assertThat(expected.getRate()).isEqualTo(null);
 	}
 }

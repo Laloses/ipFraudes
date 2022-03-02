@@ -13,9 +13,7 @@ public class CountryNameDTO implements Serializable {
 	@JsonProperty("countryCode3")
 	private String ISO;
 	@JsonProperty("countryName")
-	private String nombre;
-	/**
-	 * 
-	 */
+	private String name;
+	
 	private static final long serialVersionUID = 2457491903583350154L;
 }

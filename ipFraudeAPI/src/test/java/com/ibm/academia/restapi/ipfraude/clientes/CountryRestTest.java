@@ -25,7 +25,7 @@ public class CountryRestTest {
 		//When
 		CountryCoinDTO expected = countryRest.findCountryByCode3(code);
 		//Then
-		assertThat(expected.getMoneda()).isEqualTo("EUR");
+		assertThat(expected.getCoin()).isEqualTo("EUR");
 	}
 	
 	@Test
@@ -45,6 +45,6 @@ public class CountryRestTest {
 //			}
 		}
 		//Then
-		assertThat(expected.getMoneda()).isEqualTo(null);
+		assertThat(expected.getCoin()).isEqualTo(null);
 	}
 }

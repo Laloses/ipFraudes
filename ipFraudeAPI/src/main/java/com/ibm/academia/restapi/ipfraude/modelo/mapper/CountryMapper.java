@@ -9,10 +9,10 @@ public class CountryMapper {
 	
 	public static CountryDTO mapFromIPAndInfo(CountryNameDTO ipDTO, CountryCoinDTO layerDTO, CountryRateDTO fixerDTO) {
 		CountryDTO countryDTO = new CountryDTO();
-		countryDTO.setNombre(ipDTO.getNombre());
+		countryDTO.setName(ipDTO.getName());
 		countryDTO.setISO(ipDTO.getISO());
-		countryDTO.setMoneda(layerDTO.getMoneda());
-		countryDTO.setCotizacion(fixerDTO.getCotizacion());
+		countryDTO.setCoin(layerDTO.getCoin());
+		countryDTO.setRate(fixerDTO.getRate());
 		return countryDTO;
 	}
 }

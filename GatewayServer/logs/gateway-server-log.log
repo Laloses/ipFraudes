@@ -1,118 +1,67 @@
-2022-02-26 20:42:46,710 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
-2022-02-26 20:42:46,717 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting GatewayServerApplication using Java 17.0.1 on LaloPCs with PID 54951 (/home/laloses/Downloads/IPFraudes APIs/GatewayServer/target/classes started by laloses in /home/laloses/Downloads/IPFraudes APIs/GatewayServer)
-2022-02-26 20:42:46,717 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-02-26 20:42:46,750 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-02-26 20:42:46,750 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-02-26 20:42:47,197 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=f8253510-8d1a-3bb4-ac0c-6dea742756b1
-2022-02-26 20:42:47,243 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-26 20:42:47,243 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-26 20:42:47,244 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-26 20:42:47,661 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [After]
-2022-02-26 20:42:47,662 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Before]
-2022-02-26 20:42:47,662 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Between]
-2022-02-26 20:42:47,662 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Cookie]
-2022-02-26 20:42:47,662 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Header]
-2022-02-26 20:42:47,662 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Host]
-2022-02-26 20:42:47,662 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Method]
-2022-02-26 20:42:47,662 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Path]
-2022-02-26 20:42:47,662 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Query]
-2022-02-26 20:42:47,662 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [ReadBody]
-2022-02-26 20:42:47,662 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [RemoteAddr]
-2022-02-26 20:42:47,662 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [XForwardedRemoteAddr]
-2022-02-26 20:42:47,662 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Weight]
-2022-02-26 20:42:47,663 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2022-02-26 20:42:47,790 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
-2022-02-26 20:42:47,796 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [restartedMain] Eureka HTTP Client uses RestTemplate.
-2022-02-26 20:42:47,871 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [restartedMain] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-02-26 20:42:47,909 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [restartedMain] Setting initial instance status as: STARTING
-2022-02-26 20:42:47,937 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Initializing Eureka in region us-east-1
-2022-02-26 20:42:47,940 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [restartedMain] Resolving eureka endpoints via configuration
-2022-02-26 20:42:47,956 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Disable delta property : false
-2022-02-26 20:42:47,957 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Single vip registry refresh property : null
-2022-02-26 20:42:47,957 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Force full registry fetch : false
-2022-02-26 20:42:47,957 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application is null : false
-2022-02-26 20:42:47,957 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Registered Applications size is zero : true
-2022-02-26 20:42:47,957 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application version is -1: true
-2022-02-26 20:42:47,957 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Getting all instance registry info from the eureka server
-2022-02-26 20:42:48,167 INFO com.netflix.discovery.DiscoveryClient [restartedMain] The response status is 200
-2022-02-26 20:42:48,171 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Starting heartbeat executor: renew interval is: 30
-2022-02-26 20:42:48,175 INFO com.netflix.discovery.InstanceInfoReplicator [restartedMain] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-02-26 20:42:48,182 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Discovery Client initialized at timestamp 1645929768182 with initial instances count: 0
-2022-02-26 20:42:48,183 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [restartedMain] Registering application API-GATEWAY-SERVER with eureka with status UP
-2022-02-26 20:42:48,184 INFO com.netflix.discovery.DiscoveryClient$3 [restartedMain] Saw local status change event StatusChangeEvent [timestamp=1645929768184, current=UP, previous=STARTING]
-2022-02-26 20:42:48,184 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090: registering service...
-2022-02-26 20:42:48,211 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - registration status: 204
-2022-02-26 20:42:48,274 INFO org.springframework.boot.web.embedded.netty.NettyWebServer [restartedMain] Netty started on port 8090
-2022-02-26 20:42:48,275 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [restartedMain] Updating port to 8090
-2022-02-26 20:42:48,297 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started GatewayServerApplication in 1.854 seconds (JVM running for 2.397)
-2022-02-26 20:43:18,172 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Disable delta property : false
-2022-02-26 20:43:18,173 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Single vip registry refresh property : null
-2022-02-26 20:43:18,173 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Force full registry fetch : false
-2022-02-26 20:43:18,173 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Application is null : false
-2022-02-26 20:43:18,173 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Registered Applications size is zero : true
-2022-02-26 20:43:18,174 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Application version is -1: false
-2022-02-26 20:43:18,176 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Getting all instance registry info from the eureka server
-2022-02-26 20:43:18,200 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] The response status is 200
-2022-02-26 20:44:21,258 WARN org.springframework.cloud.loadbalancer.core.RoundRobinLoadBalancer [reactor-http-epoll-3] No servers available for service: api-ip2
-2022-02-26 20:44:53,344 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [Thread-1] Unregistering application API-GATEWAY-SERVER with eureka with status DOWN
-2022-02-26 20:44:53,345 INFO com.netflix.discovery.DiscoveryClient$3 [Thread-1] Saw local status change event StatusChangeEvent [timestamp=1645929893345, current=DOWN, previous=UP]
-2022-02-26 20:44:53,346 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090: registering service...
-2022-02-26 20:44:53,354 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - registration status: 204
-2022-02-26 20:44:55,373 INFO com.netflix.discovery.DiscoveryClient [Thread-1] Shutting down DiscoveryClient ...
-2022-02-26 20:44:58,380 INFO com.netflix.discovery.DiscoveryClient [Thread-1] Unregistering ...
-2022-02-26 20:44:58,383 INFO com.netflix.discovery.DiscoveryClient [Thread-1] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - deregister  status: 200
-2022-02-26 20:44:58,421 INFO com.netflix.discovery.DiscoveryClient [Thread-1] Completed shut down of DiscoveryClient
-2022-02-26 20:44:58,474 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting GatewayServerApplication using Java 17.0.1 on LaloPCs with PID 54951 (/home/laloses/Downloads/IPFraudes APIs/GatewayServer/target/classes started by laloses in /home/laloses/Downloads/IPFraudes APIs/GatewayServer)
-2022-02-26 20:44:58,474 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-02-26 20:44:58,606 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=f8253510-8d1a-3bb4-ac0c-6dea742756b1
-2022-02-26 20:44:58,612 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-26 20:44:58,612 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-26 20:44:58,613 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [After]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Before]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Between]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Cookie]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Header]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Host]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Method]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Path]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Query]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [ReadBody]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [RemoteAddr]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [XForwardedRemoteAddr]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Weight]
-2022-02-26 20:44:58,704 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2022-02-26 20:44:58,734 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
-2022-02-26 20:44:58,736 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [restartedMain] Eureka HTTP Client uses RestTemplate.
-2022-02-26 20:44:58,777 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [restartedMain] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-02-26 20:44:58,790 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [restartedMain] Setting initial instance status as: STARTING
-2022-02-26 20:44:58,800 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Initializing Eureka in region us-east-1
-2022-02-26 20:44:58,801 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [restartedMain] Resolving eureka endpoints via configuration
-2022-02-26 20:44:58,808 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Disable delta property : false
-2022-02-26 20:44:58,809 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Single vip registry refresh property : null
-2022-02-26 20:44:58,809 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Force full registry fetch : false
-2022-02-26 20:44:58,809 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application is null : false
-2022-02-26 20:44:58,809 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Registered Applications size is zero : true
-2022-02-26 20:44:58,809 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application version is -1: true
-2022-02-26 20:44:58,809 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Getting all instance registry info from the eureka server
-2022-02-26 20:44:58,821 INFO com.netflix.discovery.DiscoveryClient [restartedMain] The response status is 200
-2022-02-26 20:44:58,824 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Starting heartbeat executor: renew interval is: 30
-2022-02-26 20:44:58,827 INFO com.netflix.discovery.InstanceInfoReplicator [restartedMain] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-02-26 20:44:58,832 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Discovery Client initialized at timestamp 1645929898832 with initial instances count: 2
-2022-02-26 20:44:58,833 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [restartedMain] Registering application API-GATEWAY-SERVER with eureka with status UP
-2022-02-26 20:44:58,833 INFO com.netflix.discovery.DiscoveryClient$3 [restartedMain] Saw local status change event StatusChangeEvent [timestamp=1645929898833, current=UP, previous=STARTING]
-2022-02-26 20:44:58,833 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090: registering service...
-2022-02-26 20:44:58,840 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - registration status: 204
-2022-02-26 20:44:58,843 INFO org.springframework.boot.web.embedded.netty.NettyWebServer [restartedMain] Netty started on port 8090
-2022-02-26 20:44:58,844 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [restartedMain] Updating port to 8090
-2022-02-26 20:44:58,858 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started GatewayServerApplication in 0.411 seconds (JVM running for 132.958)
-2022-02-26 20:44:58,860 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
-2022-02-26 20:47:23,881 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-3]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42127
+2022-03-01 21:33:16,764 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting GatewayServerApplication using Java 17.0.1 on LaloPCs with PID 12815 (/home/laloses/Downloads/IPFraudes APIs/GatewayServer/target/classes started by laloses in /home/laloses/Downloads/IPFraudes APIs/GatewayServer)
+2022-03-01 21:33:16,765 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2022-03-01 21:33:16,766 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-01 21:33:16,805 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-01 21:33:16,805 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-01 21:33:17,818 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=f8253510-8d1a-3bb4-ac0c-6dea742756b1
+2022-03-01 21:33:17,869 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-01 21:33:17,870 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-01 21:33:17,871 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-01 21:33:18,940 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [After]
+2022-03-01 21:33:18,940 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Before]
+2022-03-01 21:33:18,941 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Between]
+2022-03-01 21:33:18,941 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Cookie]
+2022-03-01 21:33:18,941 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Header]
+2022-03-01 21:33:18,941 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Host]
+2022-03-01 21:33:18,941 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Method]
+2022-03-01 21:33:18,941 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Path]
+2022-03-01 21:33:18,941 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Query]
+2022-03-01 21:33:18,941 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [ReadBody]
+2022-03-01 21:33:18,941 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [RemoteAddr]
+2022-03-01 21:33:18,941 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2022-03-01 21:33:18,941 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Weight]
+2022-03-01 21:33:18,941 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2022-03-01 21:33:19,113 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2022-03-01 21:33:19,119 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [restartedMain] Eureka HTTP Client uses RestTemplate.
+2022-03-01 21:33:19,191 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [restartedMain] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-01 21:33:19,234 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [restartedMain] Setting initial instance status as: STARTING
+2022-03-01 21:33:19,264 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Initializing Eureka in region us-east-1
+2022-03-01 21:33:19,268 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [restartedMain] Resolving eureka endpoints via configuration
+2022-03-01 21:33:19,284 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Disable delta property : false
+2022-03-01 21:33:19,284 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Single vip registry refresh property : null
+2022-03-01 21:33:19,285 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Force full registry fetch : false
+2022-03-01 21:33:19,285 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application is null : false
+2022-03-01 21:33:19,285 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Registered Applications size is zero : true
+2022-03-01 21:33:19,285 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application version is -1: true
+2022-03-01 21:33:19,285 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Getting all instance registry info from the eureka server
+2022-03-01 21:33:19,502 INFO com.netflix.discovery.DiscoveryClient [restartedMain] The response status is 200
+2022-03-01 21:33:19,505 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Starting heartbeat executor: renew interval is: 30
+2022-03-01 21:33:19,508 INFO com.netflix.discovery.InstanceInfoReplicator [restartedMain] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-01 21:33:19,516 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Discovery Client initialized at timestamp 1646191999515 with initial instances count: 0
+2022-03-01 21:33:19,516 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [restartedMain] Registering application API-GATEWAY-SERVER with eureka with status UP
+2022-03-01 21:33:19,517 INFO com.netflix.discovery.DiscoveryClient$3 [restartedMain] Saw local status change event StatusChangeEvent [timestamp=1646191999517, current=UP, previous=STARTING]
+2022-03-01 21:33:19,518 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090: registering service...
+2022-03-01 21:33:19,546 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - registration status: 204
+2022-03-01 21:33:20,007 INFO org.springframework.boot.web.embedded.netty.NettyWebServer [restartedMain] Netty started on port 8090
+2022-03-01 21:33:20,008 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [restartedMain] Updating port to 8090
+2022-03-01 21:33:20,028 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started GatewayServerApplication in 3.595 seconds (JVM running for 4.387)
+2022-03-01 21:33:49,506 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Disable delta property : false
+2022-03-01 21:33:49,507 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Single vip registry refresh property : null
+2022-03-01 21:33:49,507 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Force full registry fetch : false
+2022-03-01 21:33:49,507 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Application is null : false
+2022-03-01 21:33:49,508 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Registered Applications size is zero : true
+2022-03-01 21:33:49,508 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Application version is -1: false
+2022-03-01 21:33:49,508 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Getting all instance registry info from the eureka server
+2022-03-01 21:33:49,516 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] The response status is 200
+2022-03-01 21:38:19,288 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-03-01 21:41:15,554 WARN org.springframework.cloud.loadbalancer.core.RoundRobinLoadBalancer [reactor-http-epoll-2] No servers available for service: api-ip
+2022-03-01 21:43:19,289 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-03-01 21:46:43,800 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-6] [2f43a845-9]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/h2-console"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42105
 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
 Error has been observed at the following site(s):
 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
+	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/h2-console" [ExceptionHandlingWebHandler]
 Original Stack Trace:
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
@@ -127,12 +76,12 @@ Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refus
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:47:53,296 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-4]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42127
+2022-03-01 21:46:46,607 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-6] [2f43a845-10]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/h2-console"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42105
 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
 Error has been observed at the following site(s):
 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
+	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/h2-console" [ExceptionHandlingWebHandler]
 Original Stack Trace:
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
@@ -147,20 +96,12 @@ Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refus
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:49:58,811 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
-2022-02-26 20:50:00,871 WARN org.springframework.cloud.loadbalancer.core.RoundRobinLoadBalancer [reactor-http-epoll-3] No servers available for service: api-ip
-2022-02-26 20:50:05,830 WARN org.springframework.cloud.loadbalancer.core.RoundRobinLoadBalancer [reactor-http-epoll-3] No servers available for service: api-ip
-2022-02-26 20:50:06,971 WARN org.springframework.cloud.loadbalancer.core.RoundRobinLoadBalancer [reactor-http-epoll-3] No servers available for service: api-ip
-2022-02-26 20:50:07,847 WARN org.springframework.cloud.loadbalancer.core.RoundRobinLoadBalancer [reactor-http-epoll-3] No servers available for service: api-ip
-2022-02-26 20:50:08,691 WARN org.springframework.cloud.loadbalancer.core.RoundRobinLoadBalancer [reactor-http-epoll-3] No servers available for service: api-ip
-2022-02-26 20:50:09,389 WARN org.springframework.cloud.loadbalancer.core.RoundRobinLoadBalancer [reactor-http-epoll-3] No servers available for service: api-ip
-2022-02-26 20:50:21,084 WARN org.springframework.cloud.loadbalancer.core.RoundRobinLoadBalancer [reactor-http-epoll-3] No servers available for service: api-ip
-2022-02-26 20:51:47,250 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-14]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:40229
+2022-03-01 21:46:48,414 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-6] [2f43a845-11]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/h2-console"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42105
 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
 Error has been observed at the following site(s):
 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
+	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/h2-console" [ExceptionHandlingWebHandler]
 Original Stack Trace:
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
@@ -175,12 +116,12 @@ Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refus
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:51:54,469 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-15]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:40229
+2022-03-01 21:46:49,238 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-6] [2f43a845-12]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/h2-console"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42105
 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
 Error has been observed at the following site(s):
 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
+	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/h2-console" [ExceptionHandlingWebHandler]
 Original Stack Trace:
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
@@ -195,12 +136,12 @@ Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refus
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:52:01,257 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-16]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:40229
+2022-03-01 21:46:49,806 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-6] [2f43a845-13]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/h2-console"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42105
 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
 Error has been observed at the following site(s):
 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
+	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/h2-console" [ExceptionHandlingWebHandler]
 Original Stack Trace:
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
@@ -215,12 +156,12 @@ Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refus
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:52:07,490 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-17]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.8"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:40229
+2022-03-01 21:46:50,333 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-6] [2f43a845-14]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/h2-console"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42105
 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
 Error has been observed at the following site(s):
 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.8" [ExceptionHandlingWebHandler]
+	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/h2-console" [ExceptionHandlingWebHandler]
 Original Stack Trace:
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
@@ -235,12 +176,12 @@ Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refus
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:52:15,423 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-18]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:40229
+2022-03-01 21:46:50,853 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-6] [2f43a845-15]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/h2-console"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42105
 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
 Error has been observed at the following site(s):
 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
+	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/h2-console" [ExceptionHandlingWebHandler]
 Original Stack Trace:
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
@@ -255,12 +196,12 @@ Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refus
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:53:13,796 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-20]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:38563
+2022-03-01 21:46:51,319 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-6] [2f43a845-16]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/h2-console"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42105
 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
 Error has been observed at the following site(s):
 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
+	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/h2-console" [ExceptionHandlingWebHandler]
 Original Stack Trace:
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
@@ -275,12 +216,12 @@ Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refus
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:53:23,269 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-21]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:38563
+2022-03-01 21:46:51,818 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-6] [2f43a845-17]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/h2-console"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42105
 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
 Error has been observed at the following site(s):
 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
+	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/h2-console" [ExceptionHandlingWebHandler]
 Original Stack Trace:
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
@@ -295,12 +236,12 @@ Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refus
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:53:24,136 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-22]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:38563
+2022-03-01 21:46:51,981 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-6] [2f43a845-18]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/h2-console"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42105
 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
 Error has been observed at the following site(s):
 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
+	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/h2-console" [ExceptionHandlingWebHandler]
 Original Stack Trace:
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
@@ -315,12 +256,12 @@ Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refus
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:53:33,645 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-23]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:38563
+2022-03-01 21:46:52,252 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-6] [2f43a845-19]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/h2-console"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42105
 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
 Error has been observed at the following site(s):
 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
+	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/h2-console" [ExceptionHandlingWebHandler]
 Original Stack Trace:
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
@@ -335,12 +276,12 @@ Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refus
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:53:37,629 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-24]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:38563
+2022-03-01 21:46:52,485 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-6] [2f43a845-20]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/h2-console"
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:42105
 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
 Error has been observed at the following site(s):
 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
+	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/h2-console" [ExceptionHandlingWebHandler]
 Original Stack Trace:
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
@@ -355,111 +296,70 @@ Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refus
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:53:43,101 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-25]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:38563
-	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
-Error has been observed at the following site(s):
-	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
-Original Stack Trace:
-Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
-	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
-	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:128)
-	at io.netty.channel.unix.Socket.finishConnect(Socket.java:320)
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:710)
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:687)
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567)
-	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
-	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:53:50,308 ERROR org.springframework.core.log.CompositeLog [reactor-http-epoll-3] [29378793-26]  500 Server Error for HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812"
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /192.168.1.133:38563
-	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
-Error has been observed at the following site(s):
-	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
-	*__checkpoint ⇢ HTTP GET "/fraudes/api/v1/api-ip/country-info/5.6.7.812" [ExceptionHandlingWebHandler]
-Original Stack Trace:
-Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
-	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:155)
-	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:128)
-	at io.netty.channel.unix.Socket.finishConnect(Socket.java:320)
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:710)
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:687)
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567)
-	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
-	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:53:55,885 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(24)-127.0.0.1] Application shutdown requested.
-2022-02-26 20:53:55,887 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [RMI TCP Connection(24)-127.0.0.1] Unregistering application API-GATEWAY-SERVER with eureka with status DOWN
-2022-02-26 20:53:55,887 INFO com.netflix.discovery.DiscoveryClient$3 [RMI TCP Connection(24)-127.0.0.1] Saw local status change event StatusChangeEvent [timestamp=1645930435887, current=DOWN, previous=UP]
-2022-02-26 20:53:55,888 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090: registering service...
-2022-02-26 20:53:55,895 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - registration status: 204
-2022-02-26 20:53:57,905 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(24)-127.0.0.1] Shutting down DiscoveryClient ...
-2022-02-26 20:54:00,906 WARN com.netflix.discovery.TimedSupervisorTask [DiscoveryClient-1] task supervisor shutting down, can't accept the task
-2022-02-26 20:54:00,927 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(24)-127.0.0.1] Unregistering ...
-2022-02-26 20:54:00,934 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(24)-127.0.0.1] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - deregister  status: 200
-2022-02-26 20:54:00,985 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(24)-127.0.0.1] Completed shut down of DiscoveryClient
-2022-02-26 20:54:02,275 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
-2022-02-26 20:54:02,277 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting GatewayServerApplication using Java 17.0.1 on LaloPCs with PID 56066 (/home/laloses/Downloads/IPFraudes APIs/GatewayServer/target/classes started by laloses in /home/laloses/Downloads/IPFraudes APIs/GatewayServer)
-2022-02-26 20:54:02,277 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2022-02-26 20:54:02,304 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-02-26 20:54:02,304 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-02-26 20:54:02,747 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=f8253510-8d1a-3bb4-ac0c-6dea742756b1
-2022-02-26 20:54:02,792 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-26 20:54:02,792 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-26 20:54:02,793 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-26 20:54:03,213 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [After]
-2022-02-26 20:54:03,213 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Before]
-2022-02-26 20:54:03,214 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Between]
-2022-02-26 20:54:03,214 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Cookie]
-2022-02-26 20:54:03,214 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Header]
-2022-02-26 20:54:03,214 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Host]
-2022-02-26 20:54:03,214 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Method]
-2022-02-26 20:54:03,215 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Path]
-2022-02-26 20:54:03,215 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Query]
-2022-02-26 20:54:03,215 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [ReadBody]
-2022-02-26 20:54:03,215 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [RemoteAddr]
-2022-02-26 20:54:03,215 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [XForwardedRemoteAddr]
-2022-02-26 20:54:03,215 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Weight]
-2022-02-26 20:54:03,215 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2022-02-26 20:54:03,347 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
-2022-02-26 20:54:03,352 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [restartedMain] Eureka HTTP Client uses RestTemplate.
-2022-02-26 20:54:03,418 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [restartedMain] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-02-26 20:54:03,456 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [restartedMain] Setting initial instance status as: STARTING
-2022-02-26 20:54:03,484 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Initializing Eureka in region us-east-1
-2022-02-26 20:54:03,487 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [restartedMain] Resolving eureka endpoints via configuration
-2022-02-26 20:54:03,503 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Disable delta property : false
-2022-02-26 20:54:03,503 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Single vip registry refresh property : null
-2022-02-26 20:54:03,504 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Force full registry fetch : false
-2022-02-26 20:54:03,504 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application is null : false
-2022-02-26 20:54:03,504 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Registered Applications size is zero : true
-2022-02-26 20:54:03,504 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application version is -1: true
-2022-02-26 20:54:03,504 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Getting all instance registry info from the eureka server
-2022-02-26 20:54:03,712 INFO com.netflix.discovery.DiscoveryClient [restartedMain] The response status is 200
-2022-02-26 20:54:03,716 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Starting heartbeat executor: renew interval is: 30
-2022-02-26 20:54:03,720 INFO com.netflix.discovery.InstanceInfoReplicator [restartedMain] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-02-26 20:54:03,728 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Discovery Client initialized at timestamp 1645930443727 with initial instances count: 2
-2022-02-26 20:54:03,728 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [restartedMain] Registering application API-GATEWAY-SERVER with eureka with status UP
-2022-02-26 20:54:03,728 INFO com.netflix.discovery.DiscoveryClient$3 [restartedMain] Saw local status change event StatusChangeEvent [timestamp=1645930443728, current=UP, previous=STARTING]
-2022-02-26 20:54:03,729 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090: registering service...
-2022-02-26 20:54:03,751 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - registration status: 204
-2022-02-26 20:54:03,819 INFO org.springframework.boot.web.embedded.netty.NettyWebServer [restartedMain] Netty started on port 8090
-2022-02-26 20:54:03,820 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [restartedMain] Updating port to 8090
-2022-02-26 20:54:03,841 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started GatewayServerApplication in 1.815 seconds (JVM running for 2.362)
-2022-02-26 20:55:43,236 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(11)-127.0.0.1] Application shutdown requested.
-2022-02-26 20:55:43,239 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [RMI TCP Connection(11)-127.0.0.1] Unregistering application API-GATEWAY-SERVER with eureka with status DOWN
-2022-02-26 20:55:43,240 INFO com.netflix.discovery.DiscoveryClient$3 [RMI TCP Connection(11)-127.0.0.1] Saw local status change event StatusChangeEvent [timestamp=1645930543240, current=DOWN, previous=UP]
-2022-02-26 20:55:43,240 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090: registering service...
-2022-02-26 20:55:43,248 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - registration status: 204
-2022-02-26 20:55:45,280 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(11)-127.0.0.1] Shutting down DiscoveryClient ...
-2022-02-26 20:55:48,305 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(11)-127.0.0.1] Unregistering ...
-2022-02-26 20:55:48,317 INFO com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient [RMI TCP Connection(11)-127.0.0.1] Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused
+2022-03-01 21:46:57,318 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(24)-127.0.0.1] Application shutdown requested.
+2022-03-01 21:46:57,320 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [RMI TCP Connection(24)-127.0.0.1] Unregistering application API-GATEWAY-SERVER with eureka with status DOWN
+2022-03-01 21:46:57,321 INFO com.netflix.discovery.DiscoveryClient$3 [RMI TCP Connection(24)-127.0.0.1] Saw local status change event StatusChangeEvent [timestamp=1646192817321, current=DOWN, previous=UP]
+2022-03-01 21:46:57,322 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090: registering service...
+2022-03-01 21:46:57,329 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - registration status: 204
+2022-03-01 21:46:59,351 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(24)-127.0.0.1] Shutting down DiscoveryClient ...
+2022-03-01 21:47:02,373 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(24)-127.0.0.1] Unregistering ...
+2022-03-01 21:47:02,377 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(24)-127.0.0.1] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - deregister  status: 200
+2022-03-01 21:47:02,412 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(24)-127.0.0.1] Completed shut down of DiscoveryClient
+2022-03-01 21:47:03,763 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2022-03-01 21:47:03,766 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting GatewayServerApplication using Java 17.0.1 on LaloPCs with PID 13844 (/home/laloses/Downloads/IPFraudes APIs/GatewayServer/target/classes started by laloses in /home/laloses/Downloads/IPFraudes APIs/GatewayServer)
+2022-03-01 21:47:03,767 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-01 21:47:03,797 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-01 21:47:03,798 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-01 21:47:04,239 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=f8253510-8d1a-3bb4-ac0c-6dea742756b1
+2022-03-01 21:47:04,283 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-01 21:47:04,284 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-01 21:47:04,285 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-01 21:47:04,706 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [After]
+2022-03-01 21:47:04,706 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Before]
+2022-03-01 21:47:04,706 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Between]
+2022-03-01 21:47:04,706 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Cookie]
+2022-03-01 21:47:04,706 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Header]
+2022-03-01 21:47:04,706 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Host]
+2022-03-01 21:47:04,706 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Method]
+2022-03-01 21:47:04,706 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Path]
+2022-03-01 21:47:04,706 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Query]
+2022-03-01 21:47:04,706 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [ReadBody]
+2022-03-01 21:47:04,707 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [RemoteAddr]
+2022-03-01 21:47:04,707 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2022-03-01 21:47:04,707 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [Weight]
+2022-03-01 21:47:04,707 INFO org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator [restartedMain] Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2022-03-01 21:47:04,831 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2022-03-01 21:47:04,836 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [restartedMain] Eureka HTTP Client uses RestTemplate.
+2022-03-01 21:47:04,925 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [restartedMain] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-01 21:47:04,967 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [restartedMain] Setting initial instance status as: STARTING
+2022-03-01 21:47:04,995 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Initializing Eureka in region us-east-1
+2022-03-01 21:47:04,998 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [restartedMain] Resolving eureka endpoints via configuration
+2022-03-01 21:47:05,014 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Disable delta property : false
+2022-03-01 21:47:05,015 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Single vip registry refresh property : null
+2022-03-01 21:47:05,015 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Force full registry fetch : false
+2022-03-01 21:47:05,015 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application is null : false
+2022-03-01 21:47:05,015 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Registered Applications size is zero : true
+2022-03-01 21:47:05,015 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application version is -1: true
+2022-03-01 21:47:05,015 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Getting all instance registry info from the eureka server
+2022-03-01 21:47:05,261 INFO com.netflix.discovery.DiscoveryClient [restartedMain] The response status is 200
+2022-03-01 21:47:05,265 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Starting heartbeat executor: renew interval is: 30
+2022-03-01 21:47:05,270 INFO com.netflix.discovery.InstanceInfoReplicator [restartedMain] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-01 21:47:05,278 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Discovery Client initialized at timestamp 1646192825278 with initial instances count: 2
+2022-03-01 21:47:05,279 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [restartedMain] Registering application API-GATEWAY-SERVER with eureka with status UP
+2022-03-01 21:47:05,280 INFO com.netflix.discovery.DiscoveryClient$3 [restartedMain] Saw local status change event StatusChangeEvent [timestamp=1646192825280, current=UP, previous=STARTING]
+2022-03-01 21:47:05,281 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090: registering service...
+2022-03-01 21:47:05,309 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - registration status: 204
+2022-03-01 21:47:05,376 INFO org.springframework.boot.web.embedded.netty.NettyWebServer [restartedMain] Netty started on port 8090
+2022-03-01 21:47:05,377 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [restartedMain] Updating port to 8090
+2022-03-01 21:47:05,397 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started GatewayServerApplication in 1.886 seconds (JVM running for 2.441)
+2022-03-01 21:47:55,989 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(10)-127.0.0.1] Application shutdown requested.
+2022-03-01 21:47:55,989 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [RMI TCP Connection(10)-127.0.0.1] Unregistering application API-GATEWAY-SERVER with eureka with status DOWN
+2022-03-01 21:47:55,989 INFO com.netflix.discovery.DiscoveryClient$3 [RMI TCP Connection(10)-127.0.0.1] Saw local status change event StatusChangeEvent [timestamp=1646192875989, current=DOWN, previous=UP]
+2022-03-01 21:47:55,990 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090: registering service...
+2022-03-01 21:47:55,993 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - registration status: 204
+2022-03-01 21:47:58,010 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(10)-127.0.0.1] Shutting down DiscoveryClient ...
+2022-03-01 21:48:01,033 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(10)-127.0.0.1] Unregistering ...
+2022-03-01 21:48:01,047 INFO com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient [RMI TCP Connection(10)-127.0.0.1] Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
 	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
@@ -562,8 +462,8 @@ Caused by: java.net.ConnectException: Connection refused
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
 	... 87 more
 
-2022-02-26 20:55:48,318 WARN com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient [RMI TCP Connection(11)-127.0.0.1] Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused
-2022-02-26 20:55:48,325 INFO com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient [RMI TCP Connection(11)-127.0.0.1] Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused
+2022-03-01 21:48:01,048 WARN com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient [RMI TCP Connection(10)-127.0.0.1] Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused
+2022-03-01 21:48:01,055 INFO com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient [RMI TCP Connection(10)-127.0.0.1] Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
 	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
@@ -667,8 +567,8 @@ Caused by: java.net.ConnectException: Connection refused
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
 	... 88 more
 
-2022-02-26 20:55:48,325 WARN com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient [RMI TCP Connection(11)-127.0.0.1] Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused
-2022-02-26 20:55:48,327 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(11)-127.0.0.1] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - de-registration failedCannot execute request on any known server
+2022-03-01 21:48:01,055 WARN com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient [RMI TCP Connection(10)-127.0.0.1] Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090": Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1] failed: Connection refused
+2022-03-01 21:48:01,057 ERROR com.netflix.discovery.DiscoveryClient [RMI TCP Connection(10)-127.0.0.1] DiscoveryClient_API-GATEWAY-SERVER/192.168.1.133:api-gateway-server:8090 - de-registration failedCannot execute request on any known server
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
@@ -737,4 +637,4 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-02-26 20:55:48,364 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(11)-127.0.0.1] Completed shut down of DiscoveryClient
+2022-03-01 21:48:01,099 INFO com.netflix.discovery.DiscoveryClient [RMI TCP Connection(10)-127.0.0.1] Completed shut down of DiscoveryClient

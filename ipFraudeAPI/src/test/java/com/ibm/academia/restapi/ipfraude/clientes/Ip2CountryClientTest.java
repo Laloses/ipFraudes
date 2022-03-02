@@ -23,7 +23,7 @@ public class Ip2CountryClientTest {
 		CountryNameDTO expected = ip2CountryRest.findCountryByIP(ip);
 		//Then
 		assertThat(expected.getISO()).isEqualTo("DEU");
-		assertThat(expected.getNombre()).isEqualTo("Germany");
+		assertThat(expected.getName()).isEqualTo("Germany");
 	}
 	
 	@Test
@@ -44,6 +44,6 @@ public class Ip2CountryClientTest {
 		}
 		//Then
 		assertThat(expected.getISO()).isEqualTo(null);
-		assertThat(expected.getNombre()).isEqualTo(null);
+		assertThat(expected.getName()).isEqualTo(null);
 	}
 }

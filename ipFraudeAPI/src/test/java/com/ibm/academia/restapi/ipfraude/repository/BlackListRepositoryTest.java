@@ -27,6 +27,7 @@ public class BlackListRepositoryTest {
 	@BeforeEach
 	private void setUp() {
 		blackListRepository.save(DatosDummy.blackList01());
+		blackListRepository.save(DatosDummy.blackList02());
 	}
 	
 	@AfterEach
@@ -41,9 +42,21 @@ public class BlackListRepositoryTest {
 		//Given
 		String ip = "1.2.3.4";
 		//When
-		Optional<BlackList> expected = blackListRepository.findByIp(ip);
+		Optional<BlackList> expected = blackListRepository.findByIpAndBanned(ip, true);
 		//Then
 		assertThat(expected.get()).isEqualTo(DatosDummy.blackList01());
+	}
+	
+	@Test
+	@DisplayName("Buscando una ip que no esta baneada")
+	void findBlackListUnbanned() {
+		//GWT
+		//Given
+		String ip = "1.2.3.4";
+		//When
+		Optional<BlackList> expected = blackListRepository.findByIpAndBanned(ip, false);
+		//Then
+		assertThat(expected.get()).isEqualTo(DatosDummy.blackList02());
 	}
 	
 	@Test
