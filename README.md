@@ -1,5 +1,4 @@
 # ipFraudes
-API Encargada de obtener información geográfica y economica sobre una ip
 
 El proyecto esta construido con **Spring Cloud**, utilizando el servidor de **Eureka** y la libreria de **Gateway** para controlar el trafico del API principal.
 
